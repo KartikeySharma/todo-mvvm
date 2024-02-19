@@ -11,18 +11,19 @@ A simple todo list app written in Kotlin using Room Database.
 
 ## Structure of files in src
 ```
-+---data
-|   |   TodoRepository.kt
-|   |
-|   \---db
-|           Todo.kt
-|           TodoDao.kt
-|           TodoDatabase.kt
-|
-\---ui
-MainActivity.kt
-TodoAdapter.kt
-TodoViewModel.kt
+\---todo
+    +---data
+    |   |   TodoRepository.kt
+    |   |
+    |   \---db
+    |           Todo.kt
+    |           TodoDao.kt
+    |           TodoDatabase.kt
+    |
+    \---ui
+            MainActivity.kt
+            TodoAdapter.kt
+            TodoViewModel.kt
 ```
 
 ## Getting Started
