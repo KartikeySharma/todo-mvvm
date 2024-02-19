@@ -1,15 +1,28 @@
 # Todo List App
 
-A simple todo list app written in Kotlin using Room Database.
+A simple Android Todo List application written in Kotlin following the MVVM architecture pattern.
+
+## What does the App do?
+The Todo List App allows users to create and manage a TODO list with text-only items, 
+mark items as DONE or NOT DONE, and persist the list across app sessions using Room Database. 
+You can also delete TODO list items individually.
+
+The app provides a simple solution for organizing and tracking tasks.
 
 ## Features
+- Create a TODO list with text-only items.
+- Mark TODO list items as DONE or NOT DONE.
+- Delete TODO list items (both DONE/NOT DONE).
+- Persistent storage of TODO list items using Room Database.
+- Single-screen user interface designed to be intuitive and user-friendly.
 
-- Add new todo items.
-- Mark todo items as checked or unchecked.
-- Delete todo items.
-- View a list of all todo items.
+## Architecture
+The app follows the Model-View-ViewModel (MVVM) architecture pattern:
+- Model: The Todo data class represents a TODO list item, and the TodoDatabase with TodoDao manages data persistence.
+- View: The MainActivity serves as the single-screen user interface, displaying the TODO list and handling user interactions.
+- ViewModel: The TodoViewModel acts as an intermediary between the UI and data, providing data to the UI and handling user actions.
 
-## Architecture and File Structure
+## File Structure
 The TODO android app follows the Model-View-ViewModel (MVVM) architecture pattern, 
 separating concerns into data, UI, and the core of the application. Here's a brief description:
 ```
