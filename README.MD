@@ -10,7 +10,7 @@ A simple todo list app written in Kotlin using Room Database.
 - View a list of all todo items.
 
 ## Structure of files in src
-'''
+```
 +---data
 |   |   TodoRepository.kt
 |   |
@@ -23,7 +23,7 @@ A simple todo list app written in Kotlin using Room Database.
 MainActivity.kt
 TodoAdapter.kt
 TodoViewModel.kt
-'''
+```
 
 ## Getting Started
 
