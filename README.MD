@@ -82,7 +82,7 @@ defaultConfig {
 
 ### Installation
 
-1. Download the project zip file from [this link](<provide your download link here>).
+1. Download the project zip file from [this link](https://github.com/ma-shamshiri/Human-Activity-Recognition#readme).
 2. Extract the contents of the zip file to your preferred location.
 3. Open Android Studio.
 4. Click on "File" > "Open Project" and navigate to the location where you extracted the project.
