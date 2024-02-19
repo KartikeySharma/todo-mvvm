@@ -9,6 +9,20 @@ A simple todo list app written in Kotlin using Room Database.
 - Delete todo items.
 - View a list of all todo items.
 
+## Structure of files in src
++---data
+|   |   TodoRepository.kt
+|   |
+|   \---db
+|           Todo.kt
+|           TodoDao.kt
+|           TodoDatabase.kt
+|
+\---ui
+MainActivity.kt
+TodoAdapter.kt
+TodoViewModel.kt
+
 ## Getting Started
 
 ### Prerequisites
