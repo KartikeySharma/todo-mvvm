@@ -12,8 +12,10 @@ class TodoRepository(private val todoDao: TodoDao) {
         todoDao.insert(todo)
     }
     suspend fun update(todo: Todo) {
-        Log.d("TodoRepository", "Updating Todo: $todo")
         todoDao.update(todo)
-        Log.d("TodoRepository", "Todo updated successfully")
+    }
+
+    suspend fun delete(todo: Todo) {
+        todoDao.delete(todo)
     }
 }

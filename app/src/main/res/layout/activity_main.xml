@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,8 +11,11 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/todoRV"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="5dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toTopOf="@id/idFAB"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
         tools:listitem="@layout/todo_rv_item" />
 
     <!--fab for adding a new note-->
@@ -21,11 +24,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_margin="20dp"
+        android:layout_margin="15dp"
+        android:contentDescription="@string/todo_icon"
         android:src="@drawable/ic_add"
-        app:backgroundTint="@color/black_shade_2"
+        app:backgroundTint="@color/yellow_shade_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:tint="@color/white" />
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

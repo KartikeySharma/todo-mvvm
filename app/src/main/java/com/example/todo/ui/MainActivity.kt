@@ -1,24 +1,23 @@
 package com.example.todo.ui
 
-import android.app.Dialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.widget.Button
 import android.widget.EditText
-import androidx.lifecycle.Observer
+import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.todo.R
-import com.example.todo.adapter.TodoAdapter
 import com.example.todo.data.db.Todo
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var viewModel: TodoViewModel
-    lateinit var todoRV: RecyclerView
-    lateinit var addFloatingActionButton: FloatingActionButton
+    private lateinit var viewModel: TodoViewModel
+    private lateinit var todoRV: RecyclerView
+    private lateinit var addFloatingActionButton: FloatingActionButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,31 +41,38 @@ class MainActivity : AppCompatActivity() {
         }
 
         addFloatingActionButton.setOnClickListener {
-            addElementDialog()
+            showAddTodoItemDialog()
         }
 
     }
 
-    private fun addElementDialog() {
-        val dialog = Dialog(this)
-        dialog.setContentView(R.layout.add_edit_todo_layout)
+    private fun showAddTodoItemDialog() {
+        val builder = AlertDialog.Builder(this)
+        val inflater = LayoutInflater.from(this)
+        val view = inflater.inflate(R.layout.add_edit_todo_layout, null)
+        builder.setView(view)
 
-        val titleEditText = dialog.findViewById<EditText>(R.id.editTextTitle)
-        val saveButton = dialog.findViewById<Button>(R.id.btnSave)
-        val cancelButton = dialog.findViewById<Button>(R.id.btnCancel)
+        // Adjust the width and height as needed
+        val width = resources.getDimensionPixelSize(R.dimen.dialog_width)
+        val height = resources.getDimensionPixelSize(R.dimen.dialog_height)
 
-        saveButton.setOnClickListener {
-            val title = titleEditText.text.toString()
+        val dialog = builder.create()
+        dialog.window?.setLayout(width, height)
+
+        val titleEditText = view.findViewById<EditText>(R.id.editTextTitle)
+        val btnSave = view.findViewById<Button>(R.id.btnSave)
+        val btnCancel = view.findViewById<Button>(R.id.btnCancel)
+
+        btnSave.setOnClickListener {
+            val title = titleEditText?.text.toString()
             if (title.isNotEmpty()) {
                 val newTodo = Todo(title, System.currentTimeMillis().toString(), false)
                 viewModel.addTodo(newTodo)
-
             }
-
             dialog.dismiss()
         }
 
-        cancelButton.setOnClickListener {
+        btnCancel.setOnClickListener {
             dialog.dismiss()
         }
 

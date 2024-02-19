@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
-    app:cardBackgroundColor="@color/black_shade_2"
+    app:cardBackgroundColor="@color/yellow_shade_light"
     app:cardCornerRadius="5dp"
     app:cardElevation="3dp">
 
@@ -19,10 +19,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
             android:checked="false" />
 
         <!-- TextView for displaying the title -->
@@ -30,25 +28,25 @@
             android:id="@+id/idTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/idCheckBox"
             android:layout_margin="3dp"
+            android:layout_toStartOf="@id/idDelete"
+            android:layout_toEndOf="@id/idCheckBox"
             android:padding="4dp"
-            android:text="Title"
+            android:text="@string/title"
             android:textColor="@color/white"
             android:textSize="18sp" />
 
-        <!-- ImageView for displaying delete icon -->
-<!--        <ImageView-->
-<!--            android:id="@+id/idIVDelete"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_alignParentEnd="true"-->
-<!--            android:layout_alignParentRight="true"-->
-<!--            android:layout_centerVertical="true"-->
-<!--            android:layout_margin="3dp"-->
-<!--            android:padding="3dp"-->
-<!--            android:src="@drawable/ic_delete"-->
-<!--            app:tint="@color/white" />-->
+        <ImageView
+            android:id="@+id/idDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="3dp"
+            android:padding="3dp"
+            android:src="@drawable/ic_delete"
+            app:tint="@color/white"
+            android:contentDescription="@string/delete_icon" />
 
     </RelativeLayout>
 
