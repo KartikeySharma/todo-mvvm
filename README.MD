@@ -38,7 +38,8 @@ separating concerns into data, UI, and the core of the application. Here's a bri
 ### Prerequisites
 
 - Android Studio installed.
-- Emulator or a physical Android device (Enable USB Debugging via Developer Options in Settings)
+- Emulator or a physical Android device 
+  - (Enable USB Debugging via Developer Options in Settings)
 
 - Gradle Script Requirements
   - Java JDK VERSION_17
