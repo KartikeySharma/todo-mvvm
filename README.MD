@@ -36,10 +36,9 @@ separating concerns into data, UI, and the core of the application. Here's a bri
 ## Getting Started
 
 ### Prerequisites
-
 - Android Studio installed.
 - Emulator or a physical Android device 
-  - (Enable USB Debugging via Developer Options in Settings)
+  - Enable USB Debugging via Developer Options in Settings
 
 - Gradle Script Requirements
   - Java JDK VERSION_17
@@ -83,7 +82,10 @@ defaultConfig {
 
 ### Installation
 
-1. Clone the repository:
+1. Download the project zip file from [this link](<provide your download link here>).
+2. Extract the contents of the zip file to your preferred location.
+3. Open Android Studio.
+4. Click on "File" > "Open Project" and navigate to the location where you extracted the project.
+5. Select the "todo-list-app" directory.
+6. Build and run the app on your preferred emulator or device.
 
-   ```bash
-   git clone https://github.com/your-username/todo-list-app.git
