@@ -42,8 +42,7 @@ separating concerns into data, UI, and the core of the application. Here's a bri
 
 - Gradle Script Requirements
   - Java JDK VERSION_17
-  
-<details>
+  - <details>
 <summary>Click to expand</summary>
 
 ```
