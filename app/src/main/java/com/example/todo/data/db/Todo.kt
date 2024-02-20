@@ -7,8 +7,8 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "todoTable")
 class Todo(
-    @ColumnInfo(name = "title") val todoTitle: String,
-    @ColumnInfo(name = "timestamp") val todoTimeStamp: String,
+    @ColumnInfo(name = "title") var todoTitle: String,
+    @ColumnInfo(name = "timestamp") var todoTimeStamp: String,
     @ColumnInfo(name = "checked") var todoChecked: Boolean
 ) {
     @PrimaryKey(autoGenerate = true)
